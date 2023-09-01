@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 id="headId"></h1>
+        </div>
+        <input type="text" id="inputId" placeholder="Type in your todo to add" class="w-50">
+        <input type="button" id="buttonId" value="Add" onclick="add()">
+    </div>
+    <div class="d-flex container mt-3">
+        <p onclick="show()" id="allId">All</p>
+        <p class="ps-5 pe-5" onclick="show1()" id="pendingId">Pending</p>
+        <p onclick="show2()" id="completeId">Completed</p>
+        <hr>
+    </div>
+    <div class="container">
+        <hr>
+        <div class="card h-100  mt-5 mb-5">
+            <div ><p id="listId"> No tasks <br><b>show all tasks</b></br></p>
+
+            </div>
+        </div>
+        <hr>
+    </div>
+    <script src="./TodoList.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

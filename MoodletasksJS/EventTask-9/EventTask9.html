@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    Enter Your Value : <input type="text" id="inputId" autofocus>
+    <select id="selectId">
+    </select>
+    <div id="mainId" class="bg-info text-center">
+
+    </div>
+    <script>
+        var inputId = document.getElementById("inputId");
+        var selectList = document.getElementById("selectId");
+        // var option = [];
+
+        addEventListener("keyup", event => {
+            if (event.key == "Enter") {
+                // option.push(inputId.value);
+                selectfun(inputId.value);
+                inputId.value = ''
+            }
+        })
+        function selectfun(values) {
+            var optionList = document.createElement("option");
+            optionList.innerText = values;
+            selectList.appendChild(optionList);
+        }
+        function formfun(){
+            var selectedElement = document.getElementById("selectId").value;
+            var mainId = document.getElementById("mainId");
+            mainId.innerHTML = "";
+            if (selectedElement !== "") {
+                var formElement = document.createElement("form");
+                formElement.className="text-center d-flex"
+                var userName = document.createElement("input");
+                userName.setAttribute("type","text");
+                userName.setAttribute("placeholder", "username")
+                userName.className = "m-3"
+
+                var password = document.createElement("input");
+                password.setAttribute("type", "password");
+                password.setAttribute("placeholder","password")
+                password.className = "m-3"
+
+                var button = document.createElement("button");
+                button.setAttribute("value","click")
+                button.name="button";
+                button.className = "m-3"
+
+                formElement.appendChild(userName);
+                formElement.appendChild(password);
+                formElement.appendChild(button);
+                mainId.appendChild(formElement);
+            }
+
+        }
+        document.getElementById("selectId").addEventListener("change",formfun)
+    </script>
+</body>
+
+</html>

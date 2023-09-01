@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inputId1" placeholder="Enter first number"> +
+    <input type="text" id="inputId2" placeholder="Enter Second number"> =
+    <input type="text" id="inputId3" placeholder="Enter your calculation" autofocus><span id="spanId"></span><br><br>
+    <input type="button" value="check me" id="checkId" onclick="validation()">
+    <input type="button" value="Reset" id="resetId" onclick="clear1()">
+    <script>
+        var inputElement1 = document.getElementById("inputId1");
+        inputElement1.value = Math.round(Math.random()*10);    
+        var inputElement2 = document.getElementById("inputId2");
+        inputElement2.value = Math.round(Math.random()*10);
+        var total = inputElement1 + inputElement2;
+        function validation(){
+            let input1 = document.getElementById("inputId1").value;
+            let input2 = document.getElementById("inputId2").value;
+            let input3 = document.getElementById("inputId3").value;
+            let total = input1 + input2;
+            if(total == input3){
+                alert("hi")
+                let spanElement = document.getElementById("spanId");
+                spanElement.innerHTML = "You entered correct value";
+            }
+            else{
+                let spanElement2 = document.getElementById("spanId");
+                spanElement2.innerHTML = "wrong match";
+            }
+        }
+        function clear1(){
+            inputElement1.value = Math.round(Math.random()*10);
+            inputElement2.value = Math.round(Math.random()*10);
+            document.getElementById("inputId3").value = "";
+        }
+    </script>
+</body>
+
+</html>

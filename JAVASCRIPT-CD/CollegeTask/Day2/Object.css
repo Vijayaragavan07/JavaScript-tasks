@@ -1,0 +1,7 @@
+.bg-info{
+    background-image: linear-gradient(rgb(12, 12, 31), rgb(58, 58, 175));
+}
+#titleId{
+    font-family: cursive;
+    color: orangered;
+}

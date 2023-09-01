@@ -1,0 +1,54 @@
+
+
+
+
+<!-- ////chat gpt code... for reference... -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  #output {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Integer Selector</h2>
+<input type="text" id="inputField" placeholder="Enter an integer">
+<button id="addButton">Add Integer</button>
+
+<select id="selectBox"></select>
+
+<div id="output"></div>
+
+<script>
+const inputField = document.getElementById("inputField");
+const addButton = document.getElementById("addButton");
+const selectBox = document.getElementById("selectBox");
+const outputDiv = document.getElementById("output");
+
+addButton.addEventListener("click", () => {
+  const inputValue = parseInt(inputField.value);
+  
+  if (!isNaN(inputValue)) {
+    const option = document.createElement("option");
+    option.value = inputValue;
+    option.textContent = inputValue;
+    selectBox.appendChild(option);
+    inputField.value = "";
+    //outputDiv.textContent = "";
+  } else {
+    outputDiv.textContent = "Please enter a valid integer.";
+  }
+});
+
+selectBox.addEventListener("change", (event) => {
+  const selectedValue = event.target.value;
+  outputDiv.textContent = `You selected: ${selectedValue}`;
+});
+</script>
+
+</body>
+</html>

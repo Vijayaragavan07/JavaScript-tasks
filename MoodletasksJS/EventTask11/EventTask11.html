@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="date" id="dateId" required>
+    <p id="paraId"></p>
+    <p id="paraId2"></p>
+    <script>
+        var dateId = document.getElementById("dateId")
+        var paraEl = document.getElementById("paraId");
+        var paraEl2 = document.getElementById("paraId2");
+        dateId.addEventListener("change", () => {
+            let res = new Date(dateId.value)
+            res.setDate(res.getDate() + 5)
+            paraEl.textContent = res;
+            let res1 = new Date(dateId.value)
+            res1.setDate(res1.getDate()-5);
+            paraEl2.textContent = res1;
+        })
+    </script>
+</body>
+
+</html>

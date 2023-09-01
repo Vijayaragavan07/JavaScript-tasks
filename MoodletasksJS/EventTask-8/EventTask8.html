@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  select {
+    margin-bottom: 10px;
+  }
+</style>
+<title>Dynamic Dropdown</title>
+</head>
+<body>
+  <label for="values">Select a value:</label>
+  <select id="values" onchange="displayPreviousValues(this)">
+    <option value="default">Select an option</option>
+    <option value="value1">Value 1</option>
+    <option value="value2">Value 2</option>
+    <option value="value3">Value 3</option>
+  </select>
+
+  <div id="previousValues"></div>
+
+  <script src="./EventTask8.js">
+
+  </script>
+</body>
+</html>

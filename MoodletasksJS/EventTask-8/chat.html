@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <label for="">value</label>
+  <input type="text" id="inputId" placeholder="Enter the value"><br><br>
+  <button type="button" id="buttonId" onclick="fun()">Submit</button><br><br>
+  <label for="">select box</label>
+  <select type="number" id="selectId" onclick="fun2()"></select><br><br>
+  <ul id="list"></ul>
+  <script>
+    function fun() {
+      var a = document.getElementById("inputId").value;
+      var optionELement = "<option>select</option>";
+      for (var i = 1; i < parseInt(a); i++) {
+        optionELement += "<option value=" + i + ">" + i + "</option>";
+      }
+      document.getElementById("selectId").innerHTML = optionELement;
+    }
+    function fun2() {
+      var b = document.getElementById("selectId").value;
+      var listElement="<h6>List Numbers</h6>";
+      for (var j = 1; j <= parseInt(b); j++) {
+        listElement += '<li value = ' + j + ">" + j + "</li>";
+      }
+      document.getElementById("list").innerHTML = listElement;
+    }
+  </script>
+</body>
+
+</html>

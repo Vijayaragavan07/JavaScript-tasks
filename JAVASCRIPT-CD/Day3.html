@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <table id="html_form" align="center">
+        <tr>
+            <td>
+                <th id="head">STUDENT LOGIN FORM IN HTML</th>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="last_name">Fast Name :</label></th>
+            <td><input type="text" name="name" id="fast_name" placeholder="enter fast name"></td>
+        </tr>
+        <tr>
+            <th><label for="last_name">Last Name :</label></th>
+            <td><input type="text" name="name" id="last_name" placeholder="enter last name"></td>
+        </tr>
+        <tr>
+            <th><label for="dob">Date Of Berth :</label></th>
+            <td><input type="date" id="dob" name="dop"></td>
+        </tr>
+        <tr>
+            <th><label for="email_id">Email-id :</label></th>
+            <td><input type="email" id="email_id" name="Email-id" placeholder="@gmail.com"></td>
+        </tr>
+        <tr>
+            <th><label for="password">Password :</label></th>
+            <td><input type="password" id="password" placeholder="Password"></td>
+        </tr>
+        <tr>
+            <th><label>Gender :</label></th>
+            <td><input type="radio" name="Gender" value="Male">Male
+                <input type="radio" name="Gender" value="Female">Female
+                <input type="radio" name="Gender" value="Others" checked>Others
+            </td>
+        </tr>
+        <tr>
+            <th><label>Language :</label></th>
+            <td>
+                <select>
+                    <option>select language</option>
+                    <option>Tamil</option>
+                    <option>English</option>
+                    <option>Hindi</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="mobile_number">Mobile Number :</label></th>
+            <td><select>
+                    <option value="+91">+91</option>
+                    <option value="+92">+92</option>
+                    <option value="+93">+93</option>
+                    <option value="+94">+94</option>
+                </select>
+                <input type="number" id="mobile_number" name="number">
+            </td>
+        </tr>
+        <tr>
+            <th><label>Course :</label></th>
+            <td><input type="checkbox" name="Course" value="full Stack" checked>full Stack
+                <input type="checkbox" name="Course" value="Web Development">Web Development
+                <input type="checkbox" name="Course" value="Others">Others
+            </td>
+        </tr>
+        <tr>
+            <th><label for="About">About :</label></th>
+            <td><textarea placeholder="write about yourself..." id="About" rows="5px" cols="45px"></textarea></td>
+        </tr>
+        <tr>
+            <th><input type="submit" value="submit" class="btn btn-primary"></th>
+            <th><input type="reset" value="reset" class="btn btn-danger"></th>
+        </tr>
+</table>
+</body>
+
+</html>

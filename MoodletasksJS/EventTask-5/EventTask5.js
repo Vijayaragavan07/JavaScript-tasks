@@ -1,0 +1,13 @@
+var htmlId = document.getElementById("htmlId");
+var firstNumber = parseInt(prompt("Enter first number : "));
+var secNumber = parseInt(prompt("Enter second number : "));
+var add = firstNumber + secNumber;
+var sub = firstNumber - secNumber;
+var mul = firstNumber * secNumber;
+var div = firstNumber / secNumber;
+var mod = firstNumber % secNumber;
+document.getElementById("add").innerHTML = " The sum is : " + add;
+document.getElementById("sub").innerHTML = " The sum is : " + sub;
+document.getElementById("mul").innerHTML = " The sum is : " + mul;
+document.getElementById("div").innerHTML = " The sum is : " + div;
+document.getElementById("mod").innerHTML = " The sum is : " + mod;
